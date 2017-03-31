@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "vue": "^2.2.1",
-    "vue-polymer-layout": "0.0.4"
+    "vue-polymer-layout": "0.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
