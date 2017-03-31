@@ -2,6 +2,13 @@
 
 > Vue layout component, copy from [react-polymer-layout](https://github.com/wizawu/react-polymer-layout)
 
+DIFF:
+
+| vue-polymer-layout  | react-polymer-layout |
+| ------| ------ |
+| \<Box\> | \<Item\> |
+| \<Box layout\> | \<Box\> |
+
 ## Build Setup
 
 ``` bash
