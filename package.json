@@ -1,0 +1,40 @@
+{
+  "name": "vue-polymer-layout",
+  "version": "0.0.4",
+  "description": "A Vue.js project",
+  "author": "soyking@outlook.com",
+  "main": "dist/main.js",
+  "scripts": {
+    "watchify": "watchify -vd -p browserify-hmr -o test/dist/app.js -e",
+    "serve": "http-server --auto -s -c 1 -a localhost test",
+    "_dev": "npm run serve & npm run watchify --",
+    "dev": "npm run _dev test/app.jsx",
+    "dev2": "npm run _dev test/app2.js",
+    "build": "cross-env NODE_ENV=production browserify -s Box -g envify src/main.jsx | uglifyjs -c warnings=false -m > dist/main.js"
+  },
+  "peerDependencies": {
+    "vue": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-helper-vue-jsx-merge-props": "^2.0.2",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-vue-jsx": "^3.4.2",
+    "babel-preset-es2015": "^6.24.0",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.1",
+    "browserify-hmr": "^0.3.1",
+    "cross-env": "^1.0.6",
+    "envify": "^3.4.1",
+    "http-server": "^0.9.0",
+    "uglify-js": "^2.5.0",
+    "vueify": "^9.1.0",
+    "watchify": "^3.4.0"
+  },
+  "browserify": {
+    "transform": [
+      "vueify",
+      "babelify"
+    ]
+  }
+}
